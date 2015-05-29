@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.bogdanlivadariu</groupId>
   <artifactId>cucumber-reporting-handlebars</artifactId>
-  <version>0.0.5</version>
+  <version>0.0.6</version>
   <packaging>jar</packaging>
   <name>cucumber-handlebars</name>
   <description>Module used to generate cucumber reports using handlebars</description>
