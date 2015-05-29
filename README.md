@@ -8,5 +8,4 @@ This is a module to generate cucumber html reports from cucumber.json files,
 using handlebars to compute the HTML, and bootstrap components to render the HTML content.
 
 Feature report summary
-
 <img src='http://s9.postimg.org/phtqe1qlb/Fire_Shot_Screen_Capture_001_C_Users_p3.png'>
