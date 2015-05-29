@@ -1,6 +1,6 @@
 #0.0.5
 * contains major for feature overview page
-* added scroll top functionality
+* added scroll top functionality for overview and summary pages
 * added charts for feature overview
 * added metrics to compute percentages, and display them in the donut charts 
 
