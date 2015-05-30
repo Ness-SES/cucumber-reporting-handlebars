@@ -2,6 +2,7 @@
 
 Latest released version: <a href='https://bintray.com/bogdanlivadariu/maven/cucumber-reporting-handlebars/_latestVersion'><img src='https://api.bintray.com/packages/bogdanlivadariu/maven/cucumber-reporting-handlebars/images/download.svg'></a> 
 [![Build Status](https://travis-ci.org/BogdanLivadariu/cucumber-reporting-handlebars.svg?branch=master)](https://travis-ci.org/BogdanLivadariu/cucumber-reporting-handlebars)
+[![Coverage Status](https://coveralls.io/repos/BogdanLivadariu/cucumber-reporting-handlebars/badge.svg)](https://coveralls.io/r/BogdanLivadariu/cucumber-reporting-handlebars)
 
 
 This is a module to generate cucumber html reports from cucumber.json files,
