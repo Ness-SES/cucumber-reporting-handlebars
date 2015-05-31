@@ -1,8 +1,8 @@
-package net.reporting.cucumber.helpers;
+package com.github.bogdanlivadariu.cucumber.helpers;
 
 import java.util.List;
 
-import net.reporting.cucumber.json.models.Feature;
+import com.github.bogdanlivadariu.cucumber.json.models.Feature;
 
 public class AllFeatureReports {
 

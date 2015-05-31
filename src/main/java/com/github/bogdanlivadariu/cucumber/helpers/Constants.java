@@ -1,4 +1,4 @@
-package net.reporting.cucumber.helpers;
+package com.github.bogdanlivadariu.cucumber.helpers;
 
 public class Constants {
 

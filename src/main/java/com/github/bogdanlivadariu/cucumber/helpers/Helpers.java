@@ -1,15 +1,14 @@
-package net.reporting.cucumber.handlebars.helpers;
+package com.github.bogdanlivadariu.cucumber.helpers;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
-import net.reporting.cucumber.json.models.Row;
-
 import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
+import com.github.bogdanlivadariu.cucumber.json.models.Row;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Helper;
 import com.github.jknack.handlebars.Options;

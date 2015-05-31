@@ -1,21 +1,18 @@
-package net.reporting.cucumber.handlebars;
+package com.github.bogdanlivadariu.cucumber.handlebars;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map.Entry;
-
-import net.reporting.cucumber.handlebars.helpers.Helpers;
-import net.reporting.cucumber.helpers.AllFeatureReports;
-import net.reporting.cucumber.json.models.Feature;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
+import com.github.bogdanlivadariu.cucumber.helpers.AllFeatureReports;
+import com.github.bogdanlivadariu.cucumber.helpers.Helpers;
+import com.github.bogdanlivadariu.cucumber.json.models.Feature;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
 import com.google.gson.Gson;
