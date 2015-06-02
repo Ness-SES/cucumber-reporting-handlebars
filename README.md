@@ -12,4 +12,4 @@ Features Overview report
 <img src='http://s23.postimg.org/h6w0nlpmj/features_Overview.png'>
 
 Feature report summary
-<img src='http://s14.postimg.org/vnf3qjyj5/scenario_Summary.png'>
+<img src='http://s4.postimg.org/exbmoitkt/scenario_Summary.png'>
