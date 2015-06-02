@@ -4,6 +4,14 @@ Latest released version: <a href='https://bintray.com/bogdanlivadariu/maven/cucu
 [![Build Status](https://travis-ci.org/BogdanLivadariu/cucumber-reporting-handlebars.svg?branch=master)](https://travis-ci.org/BogdanLivadariu/cucumber-reporting-handlebars)
 [![Coverage Status](https://coveralls.io/repos/BogdanLivadariu/cucumber-reporting-handlebars/badge.svg?branch=master)](https://coveralls.io/r/BogdanLivadariu/cucumber-reporting-handlebars?branch=master)
 
+Maven dependency:
+```xml
+  <dependency>
+    <groupId>com.github.bogdanlivadariu</groupId>
+    <artifactId>cucumber-reporting-handlebars</artifactId>
+    <version>0.0.8</version>
+  </dependency>
+```
 
 This is a module to generate cucumber html reports from cucumber.json files,
 using handlebars to compute the HTML, and bootstrap components to render the HTML content.
