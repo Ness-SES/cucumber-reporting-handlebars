@@ -8,5 +8,8 @@ Latest released version: <a href='https://bintray.com/bogdanlivadariu/maven/cucu
 This is a module to generate cucumber html reports from cucumber.json files,
 using handlebars to compute the HTML, and bootstrap components to render the HTML content.
 
+Features Overview report
+<img src='http://s23.postimg.org/h6w0nlpmj/features_Overview.png'>
+
 Feature report summary
-<img src='http://s9.postimg.org/phtqe1qlb/Fire_Shot_Screen_Capture_001_C_Users_p3.png'>
+<img src='http://s14.postimg.org/vnf3qjyj5/scenario_Summary.png'>
