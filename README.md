@@ -4,7 +4,7 @@
 
 Latest released version: <a href='https://bintray.com/bogdanlivadariu/maven/cucumber-reporting-handlebars/_latestVersion'><img src='https://api.bintray.com/packages/bogdanlivadariu/maven/cucumber-reporting-handlebars/images/download.svg'></a> 
 [![Build Status](https://travis-ci.org/BogdanLivadariu/cucumber-reporting-handlebars.svg?branch=master)](https://travis-ci.org/BogdanLivadariu/cucumber-reporting-handlebars)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BogdanLivadariu/cucumber-reporting-handlebars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 
 Maven dependency:
 ```xml
