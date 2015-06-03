@@ -1,3 +1,7 @@
+#0.0.9
+* added collapse / expand feature for scenarios
+
+
 #0.0.5
 * contains major for feature overview page
 * added scroll top functionality for overview and summary pages
