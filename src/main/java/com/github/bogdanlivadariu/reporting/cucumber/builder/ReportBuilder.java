@@ -33,9 +33,9 @@ public class ReportBuilder {
 
     private List<Feature> processedFeatures = null;
 
-    public ReportBuilder(List<String> jsonReports) throws FileNotFoundException, IOException {
-        REPORTS_SUMMARY_PATH = "cucumber-reports-with-handlebars/feature-reports/";
-        REPORTS_OVERVIEW_PATH = "cucumber-reports-with-handlebars/";
+    public ReportBuilder(List<String> jsonReports, String targetBuildPath) throws FileNotFoundException, IOException {
+        REPORTS_SUMMARY_PATH = targetBuildPath + "/feature-reports/";
+        REPORTS_OVERVIEW_PATH = targetBuildPath + "/";
 
         processedFeatures = prepareData(jsonReports);
     }
