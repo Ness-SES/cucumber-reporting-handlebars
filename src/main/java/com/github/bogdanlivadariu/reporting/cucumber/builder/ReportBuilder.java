@@ -1,4 +1,4 @@
-package com.github.bogdanlivadariu.cucumber.handlebars;
+package com.github.bogdanlivadariu.reporting.cucumber.builder;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,18 +10,18 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
-import com.github.bogdanlivadariu.cucumber.helpers.AllFeatureReports;
-import com.github.bogdanlivadariu.cucumber.helpers.Helpers;
-import com.github.bogdanlivadariu.cucumber.json.models.Feature;
+import com.github.bogdanlivadariu.reporting.cucumber.helpers.AllFeatureReports;
+import com.github.bogdanlivadariu.reporting.cucumber.helpers.Helpers;
+import com.github.bogdanlivadariu.reporting.cucumber.json.models.Feature;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
 import com.google.gson.Gson;
 
 public class ReportBuilder {
 
-    private final String FEATURE_SUMMARY_REPORT = "featureSummaryReport";
+    private final String FEATURE_SUMMARY_REPORT = "cucumber-reporting/featureSummaryReport";
 
-    private final String FEATURE_OVERVIEW_REPORT = "featureOverviewReport";
+    private final String FEATURE_OVERVIEW_REPORT = "cucumber-reporting/featureOverviewReport";
 
     private final String REPORTS_SUMMARY_PATH;
 

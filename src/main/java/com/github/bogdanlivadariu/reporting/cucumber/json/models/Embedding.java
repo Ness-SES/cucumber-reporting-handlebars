@@ -1,4 +1,4 @@
-package com.github.bogdanlivadariu.cucumber.json.models;
+package com.github.bogdanlivadariu.reporting.cucumber.json.models;
 
 public class Embedding {
 

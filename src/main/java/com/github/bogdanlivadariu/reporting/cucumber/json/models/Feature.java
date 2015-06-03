@@ -1,8 +1,8 @@
-package com.github.bogdanlivadariu.cucumber.json.models;
+package com.github.bogdanlivadariu.reporting.cucumber.json.models;
 
-import static com.github.bogdanlivadariu.cucumber.helpers.Constants.FAILED;
-import static com.github.bogdanlivadariu.cucumber.helpers.Constants.PASSED;
-import static com.github.bogdanlivadariu.cucumber.helpers.Constants.SKIPPED;
+import static com.github.bogdanlivadariu.reporting.cucumber.helpers.Constants.FAILED;
+import static com.github.bogdanlivadariu.reporting.cucumber.helpers.Constants.PASSED;
+import static com.github.bogdanlivadariu.reporting.cucumber.helpers.Constants.SKIPPED;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,12 @@
-package com.github.bogdanlivadariu.cucumber.json.models;
+package com.github.bogdanlivadariu.reporting.cucumber.json.models;
 
-import static com.github.bogdanlivadariu.cucumber.helpers.Constants.FAILED;
-import static com.github.bogdanlivadariu.cucumber.helpers.Constants.PASSED;
-import static com.github.bogdanlivadariu.cucumber.helpers.Constants.SKIPPED;
+import static com.github.bogdanlivadariu.reporting.cucumber.helpers.Constants.FAILED;
+import static com.github.bogdanlivadariu.reporting.cucumber.helpers.Constants.PASSED;
+import static com.github.bogdanlivadariu.reporting.cucumber.helpers.Constants.SKIPPED;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Element {
 
@@ -33,7 +34,10 @@ public class Element {
 
     private int stepsSkippedCount;
 
+    private String uniqueID;
+
     public void postProcess() {
+        uniqueID = UUID.randomUUID().toString();
         List<String> stepStatuses = new ArrayList<>();
         for (Step step : steps) {
             total_duration += step.getResult().getDuration();
@@ -117,4 +121,7 @@ public class Element {
         return steps.length;
     }
 
+    public String getUniqueID() {
+        return uniqueID;
+    }
 }

@@ -1,4 +1,4 @@
-package com.github.bogdanlivadariu.cucumber.helpers;
+package com.github.bogdanlivadariu.reporting.cucumber.helpers;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
-import com.github.bogdanlivadariu.cucumber.json.models.Row;
+import com.github.bogdanlivadariu.reporting.cucumber.json.models.Row;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Helper;
 import com.github.jknack.handlebars.Options;
@@ -25,15 +25,15 @@ public class Helpers {
             public CharSequence apply(Long arg0, Options arg1) throws IOException {
                 PeriodFormatter formatter = new PeriodFormatterBuilder()
                     .appendDays()
-                    .appendSuffix("d : ")
+                    .appendSuffix(" d : ")
                     .appendHours()
-                    .appendSuffix("h : ")
+                    .appendSuffix(" h : ")
                     .appendMinutes()
-                    .appendSuffix("m : ")
+                    .appendSuffix(" m : ")
                     .appendSeconds()
-                    .appendSuffix("s : ")
+                    .appendSuffix(" s : ")
                     .appendMillis()
-                    .appendSuffix("ms")
+                    .appendSuffix(" ms")
                     .toFormatter();
                 String formatted = formatter.print(new Period((arg0 * 1) / 1000000));
                 return formatted;
@@ -89,6 +89,34 @@ public class Helpers {
                         return "success";
                     case "failed":
                         return "danger";
+                }
+                return "undefined";
+            }
+        });
+        
+        handlebar.registerHelper("resolve-title", new Helper<String>() {
+            @Override
+            public CharSequence apply(String arg0, Options arg1) throws IOException {
+                switch (arg0.toLowerCase()) {
+                    case "skipped":
+                        return "This step has been skipped";
+                    case "passed":
+                        return "This step has passed";
+                    case "failed":
+                        return "This step has failed";
+                }
+                return "undefined";
+            }
+        });
+        
+        handlebar.registerHelper("is-collapsed", new Helper<String>() {
+            @Override
+            public CharSequence apply(String arg0, Options arg1) throws IOException {
+                switch (arg0.toLowerCase()) {
+                    case "passed":
+                        return "collapse";
+                    case "failed":
+                        return "collapse in";
                 }
                 return "undefined";
             }

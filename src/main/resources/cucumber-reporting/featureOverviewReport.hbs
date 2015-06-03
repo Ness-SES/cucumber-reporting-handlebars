@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>{{>style}}</style>
+    <style>{{> cucumber-reporting/style}}</style>
   </head>
   <body>
-    {{> requiredScripts}}
-    {{> menu overviewPageStatus='active' summaryPageStatus='disabled' featureName='' overviewLink='javascript: void(0);'}}
+    {{> cucumber-reporting/requiredScripts}}
+    {{> cucumber-reporting/menu overviewPageStatus='active' summaryPageStatus='disabled' featureName='' overviewLink='javascript: void(0);'}}
     <div id="charts">
       <div id="container-chart-overview-scenarios"></div>
       <div id="container-chart-overview-steps"></div>
@@ -87,8 +87,8 @@
     <a href="#" class="back-to-top" style="display: none;">
       <i title="Scroll UP" class="glyphicon glyphicon-triangle-top"></i>
     </a>
-    {{> highchartsOverviewScripts}}
-    {{> analitics}}
-    {{> scrollTopScript}}
+    {{> cucumber-reporting/highchartsOverviewScripts}}
+    {{> cucumber-reporting/analitics}}
+    {{> cucumber-reporting/scrollTopScript}}
   </body>
 </html>

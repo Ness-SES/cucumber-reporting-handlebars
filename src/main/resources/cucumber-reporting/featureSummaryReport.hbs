@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>{{> cucumber-reporting/style}}</style>
+  </head>
+  <body>
+    {{> cucumber-reporting/requiredScripts}}
+    {{> cucumber-reporting/menu overviewPageStatus='' summaryPageStatus='active' featureName=name overviewLink='../featuresOverview.html'}}
+    <div id="container-chart"></div>
+
+    <script>
+      var totalPassed = {{stepsPassedCount}};
+      var totalSkipped = {{stepsSkippedCount}};
+      var totalFailed = {{stepsFailedCount}};
+      var subTitle = '{{keyword}}: {{name}}';
+
+      var totalSteps = {{stepsTotalCount}};
+      var percentageTotalPassed = ((totalPassed / totalSteps) * 100).toFixed(2);
+      var percentageTotalFailed = ((totalFailed / totalSteps) * 100).toFixed(2);
+      var percentageTotalSkipped = ((totalSkipped / totalSteps) * 100).toFixed(2);
+      var overallStatus = percentageTotalPassed + '% passed, ' + percentageTotalFailed + '% failed, ' + percentageTotalSkipped + '% skipped';
+      subTitle += '<br/>' + overallStatus;
+    </script>
+
+    <div id="feature-container" class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          {{keyword}}: {{name}}
+          <span class="badge badge-success">{{#date total_duration}}{{/date}}</span>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-group">
+          {{#each elements}}
+            <li id="{{uniqueID}}-scenario"
+              class="scenario 
+                list-group-item 
+                list-group-item-{{#result-color overallStatus}}{{/result-color}}">
+              <span class="forDrop" data-target="#{{uniqueID}}" data-toggle="collapse">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+                {{keyword}}: {{name}}
+              </span>
+              <span class="label label-success">{{#date total_duration}}{{/date}}</span>
+              <ul class="steps list-group">
+                <div id="{{uniqueID}}" class="{{#is-collapsed overallStatus}}{{/is-collapsed}}">
+                  {{#each steps}}
+                    {{#unless hidden}}
+                      <li title="{{#resolve-title result.status}}{{/resolve-title}}"
+                        class="list-group-item 
+                          list-group-item-{{#result-color result.status}}{{/result-color}}">
+                        <span class="badge">{{#date result.duration}}{{/date}}</span>
+                        <p>{{keyword}}: {{name}}</p>
+                        {{#if result.error_message}}
+                          <pre>{{result.error_message}}</pre>
+                        {{/if}}
+                        {{#if rows}}
+                          <pre>{{#do_table rows}}{{/do_table}}</pre>
+                        {{/if}}
+                      </li>
+                    {{/unless}}
+                  {{/each}}
+                  {{#if embeddings}}
+                    <li class="list-group-item list-group-item-default">
+                      {{#each embeddings}}
+                        {{#embedding data mime_type @index}}{{/embedding}}
+                      {{/each}}
+                    </li>
+                  {{/if}}
+                </div>
+              </ul>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <a href="#" class="back-to-top" style="display: none;">
+      <i title="Scroll UP" class="glyphicon glyphicon-triangle-top"></i>
+    </a>
+    {{> cucumber-reporting/highchartsScripts}}
+    {{> cucumber-reporting/analitics}}
+    {{> cucumber-reporting/scrollTopScript}}
+  </body>
+</html>
