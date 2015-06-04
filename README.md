@@ -11,7 +11,7 @@ Maven dependency:
   <dependency>
     <groupId>com.github.bogdanlivadariu</groupId>
     <artifactId>cucumber-reporting-handlebars</artifactId>
-    <version>0.0.8</version>
+    <version>0.0.9</version>
   </dependency>
 ```
 
@@ -19,7 +19,7 @@ This is a module to generate cucumber html reports from cucumber.json files,
 using handlebars to compute the HTML, and bootstrap components to render the HTML content.
 
 Features Overview report
-<img src='http://s23.postimg.org/h6w0nlpmj/features_Overview.png'>
+<img src='http://s6.postimg.org/l6vqf1yqp/features_Overview.png'>
 
 Feature report summary
-<img src='http://s4.postimg.org/exbmoitkt/scenario_Summary.png'>
+<img src='http://s6.postimg.org/5zfqup6w1/feature_Summary_Expanded.png'>
